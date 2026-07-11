@@ -17,13 +17,18 @@ const App = () => {
     console.log("button clicked")
   }
 
+  function reset(){
+    setnum(prev=>0)
+  }
+
   
   return (
     <div className='p-4 bg-amber-100 h-screen w-full'>
       <Navbar />
       <MainCard num={num}/>
       <Buttons decreaseCount={decreaseCount}
-               increaseCount={increaseCount}/>
+               increaseCount={increaseCount}
+               reset={reset}/>
     </div>
   )
 }
