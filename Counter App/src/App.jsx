@@ -13,8 +13,12 @@ const App = () => {
   }
 
   function decreaseCount(){
-    setnum(prev=>prev-1)
-    console.log("button clicked")
+    if(num === 0){
+      return;
+    } 
+    else{
+      setnum(prev=>prev-1)
+    }
   }
 
   function reset(){
